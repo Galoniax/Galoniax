@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'NunitoMedium';
+    src: url(../fonts/NunitoSans_10pt-Medium.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NunitoBold';
+    src: url(../fonts/NunitoSans_10pt-Bold.ttf);
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NunitoBlack';
+    src: url(../fonts/NunitoSans_10pt-Black.ttf);
+    font-weight: bolder;
+    font-style: normal;
+}

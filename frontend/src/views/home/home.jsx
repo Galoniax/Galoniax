@@ -95,6 +95,7 @@ export function Home() {
               <Link
                 to={"https://drive.google.com/file/d/1ZsKVq0BjfBAwOVaK9k0AgezbEtQ0ZLbS/view?usp=sharing"}
                 target="_blank"
+                title="Ver mi CV en PDF"
               >
                 <button
                   className={`

@@ -117,6 +117,7 @@ export function Navbar() {
           <Link
             to={"https://github.com/Galoniax?tab=repositories"}
             target="_blank"
+            title="Mis proyectos en GitHub"
           >
             <button>
               <FontAwesomeIcon
@@ -133,6 +134,7 @@ export function Navbar() {
           <Link
             to={"https://www.linkedin.com/in/axel-ian-berger-a831242a4/"}
             target="_blank"
+            title="Mi perfil en LinkedIn"
           >
             <button>
                 <FontAwesomeIcon icon={faLinkedinIn} className={`text-[17px] cursor-pointer hover:scale-110 transition duration-[0.2s] ease-in-out border-[1px]  rounded-[5px] p-[4px]

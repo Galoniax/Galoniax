@@ -3,18 +3,20 @@ import { Link } from "react-router-dom";
 import { useTheme } from "../../context/ThemeContext";
 
 // Components
-import { BoxExperience } from "../../components/Experience/BoxExperience";
-import { BoxAbout } from "../../components/About/BoxAbout";
+import { BoxExperience } from "../../components/experience/BoxExperience";
+import { BoxAbout } from "../../components/about/BoxAbout";
+import { BoxProjects } from "../../components/projects/BoxProjects";
 
-import { Typing } from "../../components/Animation/Typing/Typing";
-import { motion } from "framer-motion";
+import { Typing } from "../../components/animation/Typing";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faPaperclip, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 import "./home.css";
-import { SpinAll } from "../../components/Animation/SpinAll";
+import { AnimatedSection } from "../../components/animation/AnimatedSection";
+import { IconsMoving } from "../../components/animation/IconsMoving";
+import ImgModal from "../../components/dialogs/ImgModal";
 
 export function Home() {
   const { darkMode } = useTheme();
@@ -25,7 +27,6 @@ export function Home() {
     navigator.clipboard.writeText(text);
     setCopied(true);
 
-    // El mensaje desaparecerá después de 2 segundos
     setTimeout(() => setCopied(false), 2000);
   };
 
@@ -40,75 +41,60 @@ export function Home() {
 
   return (
     <main>
-      <motion.div
-        initial={{ opacity: 0, x: -100 }}
-        transition={{ duration: 0.5 }}
-        whileInView={{ opacity: 1, x: 0 }}
-      >
-        <section className="w-full px-[100px] mt-[280px] flex  items-center">
-          <div>
+      <AnimatedSection x={-100} y={0} duration={0.5}>
+        <section
+          id="Home"
+          className="flex w-full items-center pt-[150px] md:px-[50px] md:pt-[280px] md:text-center lg:px-[100px] lg:text-left"
+        >
+          <div className="flex flex-col items-center px-5 md:px-0 lg:items-start">
             <h1
-              className={` 
-            ${
-              darkMode
-                ? "text-[#d8d8d8] text-[26px] textBlack "
-                : "text-[#464646] text-[26px] textBlack"
-            }
-          `}
+              className={`textBlack text-[22px] md:text-[23px] lg:text-[26px] ${
+                darkMode ? "text-[#d8d8d8]" : "text-[#464646]"
+              } `}
             >
               {ES.title}
             </h1>
             <h2
-              className={`tracking-wide ${
-                darkMode
-                  ? "text-[#54b37f] text-[48px] textBlack"
-                  : "text-[#FB8C00] text-[48px] textBlack"
+              className={`textBlack h-[80px] text-center text-[30px] tracking-wide md:h-fit md:text-[36px] lg:text-[48px] ${
+                darkMode ? "text-[#54b37f]" : "text-[#FB8C00]"
               }`}
             >
-              ¡Desarrolador{" "}
+              ¡Desarrollador{" "}
               <Typing texts={ES.subtitle} speed={60} delay={1200} />
             </h2>
             <p
-              className={`mt-[15px] tracking-tighter
-            ${
-              darkMode
-                ? "text-[#d8d8d8] text-[19px] textBold"
-                : "text-[#6b6b6b] text-[19px] textBold"
-            }
-          `}
+              className={`textBold mt-[15px] text-center tracking-tighter md:text-[18px] lg:text-[19px] ${
+                darkMode ? "text-[#d8d8d8]" : "text-[#6b6b6b]"
+              } `}
             >
               {ES.description[0]}
             </p>
             <p
-              className={`tracking-tighter mt-[18px] max-w-[60%] leading-7
-            ${
-              darkMode
-                ? "text-[#d8d8d8] text-[16px] textRegular"
-                : "text-[#6b6b6b] text-[16px] textRegular"
-            }
-          `}
+              className={`textRegular mt-[18px] max-w-[80%] text-center leading-7 tracking-tighter md:text-[16px] lg:max-w-[40%] lg:text-start ${
+                darkMode ? "text-[#d8d8d8]" : "text-[#6b6b6b]"
+              } `}
             >
               {ES.description[1]}
             </p>
 
-            <div className="flex mt-[35px] gap-4">
+            <div className="mt-[35px] flex gap-4 md:justify-center lg:justify-start">
               <Link
-                to={"https://drive.google.com/file/d/1ZsKVq0BjfBAwOVaK9k0AgezbEtQ0ZLbS/view?usp=sharing"}
+                to={
+                  "https://drive.google.com/file/d/1hsdFHHbh7HWuWsltRl_miRtFrjCUjvCb/view?usp=sharing"
+                }
                 target="_blank"
                 title="Ver mi CV en PDF"
               >
                 <button
-                  className={`
-                ${
-                  darkMode
-                    ? "bannerButton_dark before:bg-[conic-gradient(from_var(--angle),#27DB63,#27DB63,#27DB63,#27DB63,#f5f5f5)]"
-                    : "bannerButton_light before:bg-[conic-gradient(from_var(--angle),#FB8C00,#FB8C00,#FB8C00,#FB8C00,#ffffff)]"
-                }
-              `}
+                  className={` ${
+                    darkMode
+                      ? "bannerButton_dark before:bg-[conic-gradient(from_var(--angle),#27DB63,#27DB63,#27DB63,#27DB63,#f5f5f5)]"
+                      : "bannerButton_light before:bg-[conic-gradient(from_var(--angle),#FB8C00,#FB8C00,#FB8C00,#FB8C00,#ffffff)]"
+                  } `}
                 >
                   <div className="flex items-center justify-center gap-2">
                     <FontAwesomeIcon icon={faPaperclip} />
-                    <span className="tracking-tighter textBold text-[16px]">
+                    <span className="textBold text-[16px] tracking-tighter">
                       {" "}
                       Ver CV
                     </span>
@@ -117,321 +103,78 @@ export function Home() {
               </Link>
             </div>
           </div>
-
+          {/** 
           <div>
             <SpinAll />
           </div>
+          */}
         </section>
-      </motion.div>
+      </AnimatedSection>
+
+      {/**Icons Moving */}
+      <IconsMoving />
 
       {/**About */}
-      <section className="w-[80%] mt-[350px] mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="mt-[100px]"
-        >
-          <div className="flex items-center gap-4 justify-center">
-            <div className="flex items-center">
-              <span
-                className={`${
-                  darkMode
-                    ? "text-[#54b37f] text-[24px] textBlack"
-                    : "text-[#FB8C00] text-[24px] textBlack"
-                }`}
-              >
-                #
-              </span>
-              <h2
-                className={`tracking-tighter ${
-                  darkMode
-                    ? "text-[#d8d8d8] text-[24px] textBlack"
-                    : "text-[#525252] text-[24px] textBlack"
-                }`}
-              >
-                Sobre mí
-              </h2>
-            </div>
-            <div className={`w-[40%] border-[1px] ${darkMode ? "border-[#b4b4b473]" : " border-[#81818173]"}`}></div>
-          </div>
-
-          <BoxAbout />
-        </motion.div>
-      </section>
+      <AnimatedSection x={0} y={50} duration={0.5}>
+        <BoxAbout />
+      </AnimatedSection>
 
       {/**Experience */}
-      <section className="w-[80%] mt-[140px] mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          <div className="flex items-center justify-center gap-4">
-            <div className={`w-[400px] border-[1px] ${darkMode ? "border-[#b4b4b473]" : " border-[#81818173]"}`}></div>
-
-            <div className="flex items-center">
-              <span
-                className={`${
-                  darkMode
-                    ? "text-[#54b37f] text-[24px] textBlack"
-                    : "text-[#FB8C00] text-[24px] textBlack"
-                }`}
-              >
-                #
-              </span>
-              <h2
-                className={`tracking-tighter ${
-                  darkMode
-                    ? "text-[#d8d8d8] text-[24px] textBlack"
-                    : "text-[#525252] text-[24px] textBlack"
-                }`}
-              >
-                Experiencia
-              </h2>
-            </div>
-
-            <div className={`w-[400px] border-[1px] ${darkMode ? "border-[#b4b4b473]" : " border-[#81818173]"}`}></div>
-          </div>
-
-          <BoxExperience />
-        </motion.div>
-      </section>
+      <AnimatedSection x={0} y={50} duration={0.5}>
+        <BoxExperience />
+      </AnimatedSection>
 
       {/**Projects */}
-      <section className="w-[80%] mt-[250px] mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          <div className="flex items-center justify-center gap-4">
-            <div className={`w-[400px] border-[1px] ${darkMode ? "border-[#b4b4b473]" : " border-[#81818173]"}`}></div>
+      <AnimatedSection x={0} y={50} duration={0.5}>
+        <BoxProjects />
+      </AnimatedSection>
 
-            <div className="flex items-center">
-              <span
-                className={`${
-                  darkMode
-                    ? "text-[#54b37f] text-[24px] textBlack"
-                    : "text-[#FB8C00] text-[24px] textBlack"
-                }`}
-              >
-                #
-              </span>
-              <h2
-                className={`tracking-tighter ${
-                  darkMode
-                    ? "text-[#d8d8d8] text-[24px] textBlack"
-                    : "text-[#525252] text-[24px] textBlack"
-                }`}
-              >
-                Proyectos
-              </h2>
-            </div>
-
-            <div className={`w-[400px] border-[1px] ${darkMode ? "border-[#b4b4b473]" : " border-[#81818173]"}`}></div>
-          </div>
-
-
-
-
-
-
-
-
-          <div className="grid grid-cols-1 gap-4 mt-[60px] w-[80%] m-auto">
-            <div className="h-[500px] relative hoverson overflow-hidden w-full  items-center img1 rounded-[10px] border-[1px] border-[#4d4d4d]">
-              <div className={`absolute border-[1px] border-[#afafaf] px-[50px] py-[20px] bottom-[-100%]  w-[95%] rounded-2xl left-[2.5%] h-[40%] flex flex-col justify-center
-
-              ${
-                  darkMode
-                    ? "dark-conteiner"
-                    : "light-conteiner"
-                }
-                
-                `}>
-                <h2 className={`text-[24px] textBold tracking-tight
-                ${darkMode ? "text-[#ffffff]" : "text-[#4e4e4e]" }`}>
-                  Clínica Praxis
-                </h2>
-                <p className="text-[#999999] text-[14px] py-1 textRegular leading-[24px] tracking-tight">
-                  La página cuenta con un sistema de ingreso y registro de
-                  usuarios, además de una sección para agendar, cancelar, y ver
-                  turnos médicos o historias clínicas. Cuenta con interfaces
-                  diferentes para usuarios y administradores (medicos) con sus
-                  respectivos roles y funcionalidades.
-                </p>
-
-                <div className="flex flex-wrap items-center gap-2 text-[#999999] text-[14px] py-3 textRegular leading-[24px] tracking-tight">
-                  {[
-                    "Laravel",
-                    "PHP",
-                    "MySQL",
-                    "Bootstrap",
-                    "JavaScript",
-                    "Node.js",
-                    "HTML",
-                    "CSS",
-                  ].map((tech) => (
-                    <p
-                      key={tech}
-                      className={`px-2 rounded-[5px] border-[1px] break-words
-                      ${
-                        darkMode
-                          ? "dark-conteiner"
-                          : "light-conteiner"
-                      }`}
-                    >
-                      {tech}
-                    </p>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-2 gap-4 mt-[10px] w-[80%] m-auto">
-            <div className={`h-[450px] w-full flex flex-col rounded-[10px] border-[1px] border-[#4d4d4d]
-
-            ${
-                darkMode
-                  ? "dark-conteiner"
-                  : "light-conteiner"
-              }
-              `}>
-              <div className="h-[50%] w-full relative hoverson img1 rounded-[10px] border-[1px] border-[#4d4d4d] overflow-hidden"></div>
-
-              <div className="flex-grow p-5 w-full break-words">
-                <h2 className={`text-[20px] textBold tracking-tight
-                  ${darkMode ? "text-[#ffffff]" : "text-[#4e4e4e]" } `}>
-                  SoundWave
-                </h2>
-                <p className="text-[#999999] text-[14px] py-1 textRegular leading-[24px] tracking-tight">
-                  Página orientada a la venta de productos audiovisuales, donde
-                  el usuario puede realizar sus compras y ver su carrito,
-                  filtrar productos y crear reseñas. Cuenta con un sistema de
-                  autenticación basado en JWT.
-                </p>
-                <div className="flex flex-wrap items-center gap-2 text-[#999999] text-[13px] py-3 textRegular leading-[24px] tracking-tight">
-                  {[
-                    "Express.js",
-                    "React.js",
-                    "Vite",
-                    "JavaScript",
-                    "Node.js",
-                    "Prisma",
-                    "Bcrypt",
-                    "Axios",
-                    "Tailwind",
-                    "Docker",
-                    "PostgreSQL",
-                    "JWT",
-                    "External API",
-                  ].map((tech) => (
-                    <p
-                      key={tech}
-                      className={`px-2 rounded-[5px] border-[1px] break-words
-                       `}
-                    >
-                      {tech}
-                    </p>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            <div className={`h-[450px] w-full flex flex-col rounded-[10px] border-[1px] border-[#4d4d4d]
-            ${
-                        darkMode
-                          ? "dark-conteiner"
-                          : "light-conteiner"
-                      }
-               `}>
-              <div className="h-[50%] w-full relative hoverson img1 rounded-[10px] border-[1px] border-[#4d4d4d] overflow-hidden"></div>
-
-              <div className="flex-grow p-5 w-full break-words">
-                <h2 className={`text-[20px] textBold tracking-tight
-                  ${darkMode ? "text-[#ffffff]" : "text-[#4e4e4e]" }`}>
-                  Librería YENNY
-                </h2>
-                <p className="text-[#999999] text-[14px] py-1 textRegular leading-[24px] tracking-tight">
-                  Página basada en un sistema similar hecho en Java, donde el
-                  usuario puede realizar sus compras, filtrar productos además
-                  de sumarse al membresías. El empleado podrá gestionar el
-                  inventario y las ventas.
-                </p>
-                <div className="flex flex-wrap items-center gap-2 text-[#999999] text-[13px] py-3 textRegular leading-[24px] tracking-tight">
-                  {[
-                    "Flask",
-                    "Python",
-                    "TypeScript",
-                    "React.js",
-                    "JavaScript",
-                    "Tailwind",
-                    "JWT",
-                    "SCSS",
-                    "Axios",
-                  ].map((tech) => (
-                    <p
-                      key={tech}
-                      className={`px-2 rounded-[5px] border-[1px] break-words
-                        `}
-                    >
-                      {tech}
-                    </p>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </motion.div>
-      </section>
-
-      <section className="w-[80%] mt-[200px] mb-[200px] mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
+      {/**Contact */}
+      <AnimatedSection x={0} y={50} duration={0.5}>
+        <section className="mx-auto mt-[200px] mb-[200px] w-[80%]">
           <div className="flex flex-col items-center justify-center gap-1">
-            <h1 className={`text-[35px] textBold tracking-tighter
-              ${darkMode ? "text-[#ffffff]" : "text-[#4e4e4e]" }`}>
+            <h1
+              className={`textBold text-center text-[30px] tracking-tighter md:text-[35px] ${darkMode ? "text-[#ffffff]" : "text-[#4e4e4e]"}`}
+            >
               ¿Interesado en trabajar juntos?
             </h1>
 
-            <h3 className="text-[#a1a1a1] text-[14px] textBold tracking-tight">
+            <h3 className="textBold pt-3 text-center text-[14px] tracking-tight text-[#a1a1a1] md:pt-0">
               Para más información, contáctame vía LinkedIn o Email.
             </h3>
 
             <Link
               to={"https://www.linkedin.com/in/axel-ian-berger-a831242a4/"}
               target="_blank"
+              title="Mi perfil en LinkedIn"
             >
               <button
-                className={`button mt-10 ${
-                  darkMode
-                    ? "buttonDark"
-                    : "buttonLight"
+                className={`button mt-10 cursor-pointer ${
+                  darkMode ? "buttonDark" : "buttonLight"
                 }`}
               >
                 <FontAwesomeIcon
-                  className={`icon text-[40px] 
-                    ${darkMode ? "text-[#FFFFFF]" : "text-[#4e4e4e]" }`}
+                  className={`icon text-[40px] ${darkMode ? "text-[#FFFFFF]" : "text-[#4e4e4e]"}`}
                   icon={faLinkedin}
                 />
-                <span className={`text textBold ${darkMode ? "text-[#FFFFFF]" : "text-[#4e4e4e]" }`}>LinkedIn</span>
+                <span
+                  className={`text textBold ${darkMode ? "text-[#FFFFFF]" : "text-[#4e4e4e]"}`}
+                >
+                  LinkedIn
+                </span>
               </button>
             </Link>
 
             <button
               onClick={() => copyToClipboard("axelian2504@gmail.com")}
-              className={`button mt-3 relative ${
-                darkMode
-                  ? "buttonDark"
-                  : "buttonLight"
+              className={`button relative mt-3 cursor-copy ${
+                darkMode ? "buttonDark" : "buttonLight"
               }`}
             >
-              <FontAwesomeIcon className={`icon text-[40px] ${darkMode ? "text-[#FFFFFF]" : "text-[#4e4e4e]" }`} icon={faEnvelope} />
+              <FontAwesomeIcon
+                className={`icon text-[40px] ${darkMode ? "text-[#FFFFFF]" : "text-[#4e4e4e]"}`}
+                icon={faEnvelope}
+              />
 
               {/* Mensaje de copiado */}
               {copied ? (
@@ -441,46 +184,8 @@ export function Home() {
               )}
             </button>
           </div>
-        </motion.div>
-      </section>
+        </section>
+      </AnimatedSection>
     </main>
   );
 }
-
-/*
-<section className="w-[80%] mt-[200px] mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          <div className="flex items-center justify-center gap-4">
-            
-              <div className="w-[400px] border-[1px] border-[#b4b4b473]"></div>
-
-                <div className="flex items-center">
-              <span
-                className={`${
-                  darkMode
-                    ? "text-[#A8BE6A] text-[24px] textBlack"
-                    : "text-[#66237b] text-[24px] textBlack"
-                }`}
-              >
-                #
-              </span>
-              <h2
-                className={`tracking-tighter ${
-                  darkMode
-                    ? "text-[#d8d8d8] text-[24px] textBlack"
-                    : "text-[#66237b] text-[24px] textBlack"
-                }`}
-              >
-                Experiencia
-              </h2>
-            </div>
-           
-            <div className="w-[400px] border-[1px] border-[#b4b4b473]"></div>
-          </div>
-         
-        </motion.div>
-      </section>*/

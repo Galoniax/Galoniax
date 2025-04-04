@@ -2,7 +2,7 @@ import React from "react";
 import { useTheme } from "../../context/ThemeContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import "./box.css"
+import "./about.css";
 
 import {
   faTerminal,
@@ -23,85 +23,89 @@ export function BoxAbout() {
   };
 
   return (
-    <div className={`w-[80%] mx-auto mt-[60px] flex justify-center  h-[300px] border-[1px]  rounded-[5px] animated-border
-    ${darkMode ? "dark-conteiner" : "light-conteiner"}`}>
-      <div className="w-[33%] p-[40px]">
-        <FontAwesomeIcon
-          icon={faTerminal}
-          className={`text-[25px] mb-3
-                ${darkMode ? "fa-icon-dark" : "fa-icon-light"}`}
-        />
-        <h2
-          className={`tracking-tighter ${
-            darkMode
-              ? "text-[#d8d8d8] text-[22px] textBlack"
-              : "text-[#4e4e4e] text-[22px] textBlack"
-          }`}
-        >
-          {ES.aboutTitle[0]}
-        </h2>
-        <p
-          className={`tracking-tighter mt-3 leading-[24px] w-[300px] text-balance ${
-            darkMode
-              ? "text-[#d8d8d8ce] text-[13px] textRegular"
-              : "text-[#6b6b6b] text-[13px] textRegular"
-          }`}
-        >
-          {ES.aboutDescription[0]}
-        </p>
+    <section id="Acerca" className="mx-auto pt-[250px] w-[80%]">
+      <div className="flex items-center justify-center gap-4">
+        <div className="flex items-center">
+          <span
+            className={`textBlack text-[24px] ${darkMode ? "text-[#54b37f]" : "text-[#FB8C00]"} `}
+          >
+            #
+          </span>
+          <h2
+            className={`textBlack text-[24px] tracking-tighter ${darkMode ? "text-[#d8d8d8]" : "text-[#525252]"} `}
+          >
+            Sobre mí
+          </h2>
+        </div>
+        <div
+          className={`w-[40%] border-[1px] ${darkMode ? "border-[#b4b4b473]" : "border-[#81818173]"} `}
+        ></div>
       </div>
 
-      <div className="w-[33%] p-[40px]">
-        <FontAwesomeIcon
-          icon={faClock}
-          className={`text-[25px] mb-3
-                ${darkMode ? "fa-icon-dark" : "fa-icon-light"}`}
-        />
-        <h2
-          className={`tracking-tighter ${
-            darkMode
-              ? "text-[#d8d8d8] text-[22px] textBlack"
-              : "text-[#4e4e4e] text-[22px] textBlack"
-          }`}
-        >
-          {ES.aboutTitle[1]}
-        </h2>
-        <p
-          className={`tracking-tighter mt-3 leading-[24px] w-[300px] text-balance ${
-            darkMode
-              ? "text-[#d8d8d8ce] text-[13px] textRegular"
-              : "text-[#6b6b6b] text-[13px] textRegular"
-          }`}
-        >
-          {ES.aboutDescription[1]}
-        </p>
-      </div>
+      <div
+        className={`animated-border mx-auto mt-[50px] flex h-fit w-[80%] justify-center rounded-[5px] border-[1px] flex-col  lg:flex-row lg:text-left ${darkMode ? "dark-container" : "light-container"} `}
+      >
+        <div className="p-[40px] md:w-[100%] lg:w-[33%]">
+          <FontAwesomeIcon
+            icon={faTerminal}
+            className={`mb-3 text-[25px] ${darkMode ? "fa-icon-dark" : "fa-icon-light"} `}
+          />
+          <h2
+            className={`textBlack text-[22px] tracking-tighter ${darkMode ? "text-[#d8d8d8]" : "text-[#4e4e4e]"} `}
+          >
+            {ES.aboutTitle[0]}
+          </h2>
+          <p
+            className={`textRegular mt-3 text-[13px] leading-[24px] tracking-tighter md:w-[100%] ${darkMode ? "text-[#d8d8d8ce]" : "text-[#6b6b6b]"}`}
+          >
+            {ES.aboutDescription[0]}
+          </p>
+        </div>
 
-      <div className="w-[33%] p-[40px]">
-        <FontAwesomeIcon
-          icon={faPersonHiking}
-          className={`text-[25px] mb-3
-                ${darkMode ? "fa-icon-dark" : "fa-icon-light"}`}
-        />
-        <h2
-          className={`tracking-tighter ${
-            darkMode
-              ? "text-[#d8d8d8] text-[22px] textBlack"
-              : "text-[#4e4e4e] text-[22px] textBlack"
-          }`}
-        >
-          {ES.aboutTitle[2]}
-        </h2>
-        <p
-          className={`tracking-tighter mt-3 leading-[24px] w-[300px] text-balance ${
-            darkMode
-              ? "text-[#d8d8d8ce] text-[13px] textRegular"
-              : "text-[#6b6b6b] text-[13px] textRegular"
-          }`}
-        >
-          {ES.aboutDescription[2]}
-        </p>
+        <div className="md:w-[100%] lg:w-[33%] p-[40px]">
+          <FontAwesomeIcon
+            icon={faClock}
+            className={`mb-3 text-[25px] ${darkMode ? "fa-icon-dark" : "fa-icon-light"}`}
+          />
+          <h2
+            className={`tracking-tighter ${
+              darkMode
+                ? "textBlack text-[22px] text-[#d8d8d8]"
+                : "textBlack text-[22px] text-[#4e4e4e]"
+            }`}
+          >
+            {ES.aboutTitle[1]}
+          </h2>
+          <p
+            className={`textRegular mt-3 text-[13px] leading-[24px] tracking-tighter md:w-[100%] ${
+              darkMode ? "text-[#d8d8d8ce]" : "text-[#6b6b6b]"
+            }`}
+          >
+            {ES.aboutDescription[1]}
+          </p>
+        </div>
+
+        <div className="p-[40px] md:w-[100%] lg:w-[33%]">
+          <FontAwesomeIcon
+            icon={faPersonHiking}
+            className={`mb-3 text-[25px] ${darkMode ? "fa-icon-dark" : "fa-icon-light"}`}
+          />
+          <h2
+            className={`textBlack text-[22px] tracking-tighter ${
+              darkMode ? "text-[#d8d8d8]" : "text-[#4e4e4e]"
+            }`}
+          >
+            {ES.aboutTitle[2]}
+          </h2>
+          <p
+            className={`textRegular mt-3 text-[13px] leading-[24px] tracking-tighter md:w-[100%] ${
+              darkMode ? "text-[#d8d8d8ce]" : "text-[#6b6b6b]"
+            }`}
+          >
+            {ES.aboutDescription[2]}
+          </p>
+        </div>
       </div>
-    </div>
+    </section>
   );
 }

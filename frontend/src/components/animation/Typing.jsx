@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useTheme } from "../../../context/ThemeContext";
+import { useTheme } from "../../context/ThemeContext";
 
 export function Typing({ texts = [], speed, delay }) {
   const { darkMode } = useTheme();
@@ -44,11 +44,7 @@ export function Typing({ texts = [], speed, delay }) {
 
   return (
     <span
-      className={`tracking-wide ${
-        darkMode
-          ? "text-[#54b37f] text-[50px] textBlack"
-          : "text-[#FB8C00] text-[50px] textBlack"
-      }`}
+      className={`textBlack text-[30px] md:text-[36px] lg:text-[48px] tracking-wide  ${darkMode ? "text-[#54b37f]" : "text-[#FB8C00]"}`}
     >
       {displayedText}
     </span>

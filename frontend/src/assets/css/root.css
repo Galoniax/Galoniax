@@ -1,11 +1,11 @@
 /* Dark Conteiner Background */
-.dark-conteiner {
+.dark-container {
     background: #000000;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to bottom, #242124, #292929);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to top, #242124, #292929); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-.light-conteiner {
+.light-container {
     background: #ADA996;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to bottom, #f3f3f3,  #e2e2e2);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to top, #f3f3f3,  #e2e2e2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */

@@ -9,7 +9,7 @@ export function Footer() {
   return (
     <div
       className={`h-[50px] border-t-[1px] rounded-[5px] border-[#8d8d8d73] flex justify-center items-center
-    ${darkMode ? "dark-conteiner" : "light-conteiner"}`}
+    ${darkMode ? "dark-container" : "light-container"}`}
     >
       <p className={`text-[14px] textRegular tracking-tight 
       ${darkMode ? "text-[#d8d8d8]" : "text-[#363636]" }`}>

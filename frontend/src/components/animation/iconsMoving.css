@@ -1,0 +1,29 @@
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-52.5%);
+  }
+}
+
+.icons-moving-container {
+  width: 100%;
+  white-space: nowrap;
+}
+
+.icons-moving {
+  display: flex;
+  width: max-content;
+  animation: scroll 10s linear infinite;
+}
+
+.icons-moving:hover {
+  animation-play-state: paused;
+}
+
+.scaleGrow:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out 0.2s;
+}

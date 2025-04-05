@@ -16,7 +16,6 @@ import { faPaperclip, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import "./home.css";
 import { AnimatedSection } from "../../components/animation/AnimatedSection";
 import { IconsMoving } from "../../components/animation/IconsMoving";
-import ImgModal from "../../components/dialogs/ImgModal";
 
 export function Home() {
   const { darkMode } = useTheme();

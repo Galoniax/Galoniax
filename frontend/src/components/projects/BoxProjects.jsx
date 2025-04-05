@@ -3,6 +3,29 @@ import { useTheme } from "../../context/ThemeContext";
 
 import ImgModal from "../dialogs/ImgModal";
 
+const praxisImages = Object.values(
+  import.meta.glob("../../assets/img/Praxis/*.png", {
+    eager: true,
+    import: "default",
+  }),
+);
+const soundWaveImages = Object.values(
+  import.meta.glob("../../assets/img/SoundWave/*.png", {
+    eager: true,
+    import: "default",
+  }),
+);
+const yennyImages = Object.values(
+  import.meta.glob("../../assets/img/Yenny/*.png", {
+    eager: true,
+    import: "default",
+  }),
+);
+
+// import.meta.glob busca todos los .png dentro del directorio especificado.
+// eager: true hace que se importen automáticamente (sin necesidad de una promesa).
+// Object.values(...) devuelve un array de los valores importados (las rutas a las imágenes).
+
 import "./projects.css";
 
 export function BoxProjects() {
@@ -13,38 +36,15 @@ export function BoxProjects() {
 
   const projects = [
     {
-      images: [
-        "../../src/assets/img/Praxis/L1.png",
-        "../../src/assets/img/Praxis/L2.png",
-        "../../src/assets/img/Praxis/L3.png",
-        "../../src/assets/img/Praxis/L4.png",
-        "../../src/assets/img/Praxis/L5.png",
-        "../../src/assets/img/Praxis/L6.png",
-        "../../src/assets/img/Praxis/L7.png",
-        "../../src/assets/img/Praxis/L8.png",
-      ],
+      images: praxisImages,
       title: "Praxis",
     },
     {
-      images: [
-        "../../src/assets/img/SoundWave/S1.png",
-        "../../src/assets/img/SoundWave/S2.png",
-        "../../src/assets/img/SoundWave/S3.png",
-        "../../src/assets/img/SoundWave/S4.png",
-        "../../src/assets/img/SoundWave/S5.png",
-        "../../src/assets/img/SoundWave/S6.png",
-        "../../src/assets/img/SoundWave/S7.png",
-        "../../src/assets/img/SoundWave/S8.png",
-      ],
+      images: soundWaveImages,
       title: "SoundWave",
     },
     {
-      images: [
-        "../../src/assets/img/Yenny/Y1.png",
-        "../../src/assets/img/Yenny/Y2.png",
-        "../../src/assets/img/Yenny/Y3.png",
-        "../../src/assets/img/Yenny/Y4.png",
-      ],
+      images: yennyImages,
       title: "Yenny",
     },
   ];

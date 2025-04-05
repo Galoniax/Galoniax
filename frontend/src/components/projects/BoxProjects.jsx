@@ -10,7 +10,7 @@ const praxisImages = Object.values(
   }),
 );
 const soundWaveImages = Object.values(
-  import.meta.glob("../../assets/img/SoundWave/*.png", {
+  import.meta.glob("../../assets/img/Soundwave/*.png", {
     eager: true,
     import: "default",
   }),

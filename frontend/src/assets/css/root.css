@@ -28,9 +28,9 @@
 }
 
 .fa-icon-dark {
-  background: linear-gradient(to right, #78ffd6, #54b37f);
+  color: #27db63
 }
 
 .fa-icon-light {
-  background: linear-gradient(to right, #fb8c00, #f3f3f3);
+  color: #FB8C00;
 }

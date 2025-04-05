@@ -17,7 +17,7 @@ export function BoxAbout() {
     aboutTitle: ["Full Stack", "En Punto", "Entusiasta"],
     aboutDescription: [
       "Desarrollador de aplicaciones web y móviles, que abarca el desarrollo de interfaces de usuario (UI/Frontend), como la gestión de manejo de datos (Backend), permitiendo la creación de aplicaciones completas y funcionales.",
-      "Me gusta ser una persona puntual y responsable, que cumple con los plazos y objetivos establecidos. Siempre busco acompañar a mis compañeros de equipo y ayudar en lo que sea necesario.",
+      "Soy una persona puntual y responsable, que cumple con los plazos y objetivos establecidos. Siempre busco acompañar a mis compañeros de equipo y ayudar en lo que sea necesario.",
       "Me considero una persona apasionada por la tecnología y el desarrollo de software. Siempre estoy en constante aprendizaje y mejora de mis habilidades, buscando siempre la excelencia en todo lo que hago.",
     ],
   };

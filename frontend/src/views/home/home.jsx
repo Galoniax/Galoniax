@@ -34,7 +34,7 @@ export function Home() {
     subtitle: ["Full Stack!", "Mobile!", "Web!"],
     description: [
       "Soy un Programador Junior que actualmente vive en Buenos Aires, Argentina.",
-      "Me especializo en el desarrollo de sistemas, aplicaciones web y móviles, empleando tecnologías modernas para crear soluciones eficientes y escalables. Si tu empresa o proyecto necesita un sistema a medida, estaré encantado de ayudarte.",
+      "Estoy enfocado en el desarrollo de sistemas, aplicaciones web y móviles, empleando tecnologías modernas para crear soluciones eficientes y escalables. Si tu empresa o proyecto necesita un sistema a medida, estaré encantado de ayudarte.",
     ],
   };
 
@@ -135,11 +135,11 @@ export function Home() {
             <h1
               className={`textBold text-center text-[30px] tracking-tighter md:text-[35px] ${darkMode ? "text-[#ffffff]" : "text-[#4e4e4e]"}`}
             >
-              ¿Interesado en trabajar juntos?
+              ¿Necesitás ayuda con tu proyecto?
             </h1>
 
             <h3 className="textBold pt-3 text-center text-[14px] tracking-tight text-[#a1a1a1] md:pt-0">
-              Para más información, contáctame vía LinkedIn o Email.
+              Para más información, contactame vía LinkedIn o Email.
             </h3>
 
             <Link

@@ -4,8 +4,8 @@ import { ROUTES } from "@/api/constants/constants";
 import { motion } from "motion/react";
 import { VideoText } from "@/components/ui/feedback/video-text";
 
-import video from "@/assets/images/335040.mp4";
-import videoDark from "@/assets/images/199958-911694865.mp4";
+const video = "https://ilozjawukjoolmfdqwjn.supabase.co/storage/v1/object/public/images/Video.mp4";
+const videoDark = "https://ilozjawukjoolmfdqwjn.supabase.co/storage/v1/object/public/images/DarkVideo.mp4";
 
 interface NavLinkProps {
   href: string;

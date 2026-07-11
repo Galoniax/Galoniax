@@ -1,0 +1,125 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 46" width="48" height="46">
+	<defs>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp1">
+			<path d="m25.95 44.94c-0.67 0.84-2.02 0.37-2.02-0.7v-10.3q-0.01-0.45-0.18-0.87-0.17-0.41-0.49-0.73-0.32-0.32-0.73-0.49-0.42-0.17-0.87-0.17h-11.37c-0.92 0-1.46-1.04-0.92-1.79l7.48-10.47c1.07-1.5 0-3.58-1.84-3.58h-13.77c-0.92 0-1.46-1.04-0.92-1.79l9.69-13.58c0.22-0.29 0.56-0.47 0.92-0.47h28.9c0.92 0 1.45 1.04 0.92 1.79l-7.48 10.47c-1.07 1.5 0 3.58 1.84 3.58h11.38c0.94 0 1.47 1.09 0.89 1.83 0 0-21.43 27.27-21.43 27.27z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp2">
+			<path d="m25.84 44.94c-0.66 0.84-2.02 0.37-2.02-0.7v-10.3q0-0.45-0.17-0.87-0.17-0.41-0.49-0.73-0.32-0.32-0.74-0.49-0.41-0.17-0.86-0.17h-11.38c-0.92 0-1.45-1.04-0.92-1.79l7.48-10.47c1.07-1.5 0-3.58-1.84-3.58h-13.77c-0.92 0-1.45-1.04-0.92-1.79l9.7-13.58c0.21-0.29 0.56-0.47 0.92-0.47h28.89c0.92 0 1.46 1.04 0.92 1.79l-7.48 10.47c-1.07 1.5 0 3.58 1.85 3.58h11.37c0.95 0 1.48 1.08 0.89 1.83 0 0-21.43 27.27-21.43 27.27z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp3">
+			<path d="m10.25 42.48c-8.13 0-14.7-2.46-14.7-5.5 0-3.05 6.57-5.51 14.7-5.51 8.13 0 14.71 2.46 14.71 5.51 0 3.04-6.58 5.5-14.71 5.5z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp4">
+			<path d="m-9.44 28.58c-16.51 0-29.85-4.64-29.85-10.39 0-5.76 13.34-10.4 29.85-10.4 16.5 0 29.85 4.64 29.85 10.4 0 5.75-13.35 10.39-29.85 10.39z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp5">
+			<path d="m-9.96 22.24c-16.86 0-30.49-2.46-30.49-5.51 0-3.05 13.63-5.51 30.49-5.51 16.86 0 30.48 2.46 30.48 5.51 0 3.05-13.62 5.51-30.48 5.51z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp6">
+			<path d="m-5.26 40.24c-16.92 0-30.59-2.46-30.59-5.51 0-3.05 13.67-5.51 30.59-5.51 16.93 0 30.6 2.46 30.6 5.51 0 3.05-13.67 5.51-30.6 5.51z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp7">
+			<path d="m-3.72 41.39c-16.92 0-30.6-2.47-30.6-5.51 0-3.05 13.68-5.51 30.6-5.51 16.92 0 30.6 2.46 30.6 5.51 0 3.04-13.68 5.51-30.6 5.51z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp8">
+			<path d="m31.09 10.23c-0.45 7.77 9.03 14.63 21.22 15.34 12.19 0.72 22.41-4.99 22.86-12.76 0.46-7.76-9.03-14.62-21.22-15.33-12.19-0.72-22.41 4.99-22.86 12.75z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp9">
+			<path d="m54.24 18.45c-11.89 0-21.5-1.55-21.5-3.48 0-1.93 9.61-3.49 21.5-3.49 11.88 0 21.49 1.56 21.49 3.49 0 1.93-9.61 3.48-21.49 3.48z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp10">
+			<path d="m54.24 18.45c-11.89 0-21.5-1.55-21.5-3.48 0-1.93 9.61-3.49 21.5-3.49 11.88 0 21.49 1.56 21.49 3.49 0 1.93-9.61 3.48-21.49 3.48z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp11">
+			<path d="m-18.13 31.43c-1.88-1.55 4.88-12.84 15.12-25.26 10.24-12.42 20.04-21.21 21.92-19.66 1.88 1.56-4.88 12.85-15.12 25.27-10.24 12.41-20.04 21.2-21.92 19.65z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp12">
+			<path d="m29.65 16.88c-1.93-1.5 4.51-12.98 14.4-25.68 9.88-12.7 19.43-21.76 21.35-20.26 1.92 1.49-4.51 12.97-14.4 25.67-9.89 12.71-19.43 21.77-21.35 20.27z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp13">
+			<path d="m35.48 13.96c-2.61-2.03-2.06-7.08 1.22-11.29 3.28-4.22 8.04-5.99 10.65-3.96 2.6 2.02 2.06 7.07-1.23 11.29-3.28 4.22-8.04 5.99-10.64 3.96z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp14">
+			<path d="m-19.76 61.3c-1.92-1.49 4.52-12.97 14.4-25.67 9.89-12.71 19.43-21.77 21.36-20.27 1.92 1.5-4.52 12.98-14.4 25.68-9.89 12.7-19.43 21.76-21.36 20.26z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp15">
+			<path d="m-19.76 61.3c-1.92-1.49 4.52-12.97 14.4-25.67 9.89-12.71 19.43-21.77 21.36-20.27 1.92 1.5-4.52 12.98-14.4 25.68-9.89 12.7-19.43 21.76-21.36 20.26z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp16">
+			<path d="m17.77 52.88c-1.92-1.5 4.52-12.98 14.4-25.68 9.89-12.7 19.44-21.76 21.36-20.26 1.92 1.49-4.51 12.97-14.4 25.67-9.89 12.71-19.43 21.76-21.36 20.27z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp17">
+			<path d="m29.02 44.47c-2.6-2.03-0.51-9.06 4.69-15.74 5.19-6.67 11.5-10.43 14.1-8.4 2.61 2.03 0.52 9.06-4.68 15.74-5.2 6.67-11.5 10.43-14.11 8.4z"/>
+		</clipPath>
+		<image  width="48" height="48" id="img1" href="data:image/png;base64,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"/>
+	</defs>
+	<style>
+	</style>
+	<g clip-path="url(#cp1)">
+	</g>
+	<g id="Clip-Path" clip-path="url(#cp2)" style="display: none">
+		<g>
+			<g>
+				<g clip-path="url(#cp3)">
+				</g>
+			</g>
+			<g>
+				<g clip-path="url(#cp4)">
+				</g>
+			</g>
+			<g>
+				<g clip-path="url(#cp5)">
+				</g>
+			</g>
+			<g>
+				<g clip-path="url(#cp6)">
+				</g>
+			</g>
+			<g>
+				<g clip-path="url(#cp7)">
+				</g>
+			</g>
+			<g>
+				<g clip-path="url(#cp8)">
+				</g>
+			</g>
+			<g>
+				<g clip-path="url(#cp9)">
+				</g>
+			</g>
+			<g>
+				<g clip-path="url(#cp10)">
+				</g>
+			</g>
+			<g>
+				<g clip-path="url(#cp11)">
+				</g>
+			</g>
+			<g>
+				<g clip-path="url(#cp12)">
+				</g>
+			</g>
+			<g>
+				<g clip-path="url(#cp13)">
+				</g>
+			</g>
+			<g>
+				<g clip-path="url(#cp14)">
+				</g>
+			</g>
+			<g>
+				<g clip-path="url(#cp15)">
+				</g>
+			</g>
+			<g>
+				<g clip-path="url(#cp16)">
+				</g>
+			</g>
+			<g>
+				<g clip-path="url(#cp17)">
+				</g>
+			</g>
+		</g>
+	</g>
+	<use id="Capa 1" href="#img1" x="0" y="0"/>
+</svg>

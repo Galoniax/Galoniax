@@ -1,17 +1,17 @@
 import { useRef, useState } from "react";
 
-import { useAppMode } from "../hooks/useAppMode";
+import { useAppMode } from "@/hooks/useAppMode";
+import Balatro from "@/components/ui/feedback/balatro/Balatro";
 
 import { motion, useScroll, useTransform, useSpring } from "motion/react";
-import { categories } from "../api/constants/constants";
-
-import LinkedButtons from "../components/ui/buttons/LinkedButtons";
+import { categories } from "@/api/constants/constants";
+import { GridPattern } from "@/components/ui/feedback/grid-pattern";
+import LinkedButtons from "@/components/ui/buttons/LinkedButtons";
 import { ArrowUp, Check, Copy, Mail } from "lucide-react";
+import Mockup from "@/components/features/projects/Mockup";
 
-import { EMAIL } from "../api/config";
-import Credentials from "../components/features/sections/Credentials";
-import Hero from "@/components/features/sections/Hero";
-import Proyects from "@/components/features/sections/Proyects";
+import { projectList } from "@/data/projects";
+import { EMAIL } from "@/api/config";
 
 export default function Home() {
   const { isDarkTheme } = useAppMode();
@@ -63,7 +63,80 @@ export default function Home() {
 
   return (
     <main className={`${containerClassName} min-h-screen`}>
-      <Hero isDarkTheme={isDarkTheme} />
+      <section className="relative min-h-screen flex flex-col gap-y-2 px-6 md:px-20 overflow-hidden pt-[10vh] md:pt-[20vh]">
+        <GridPattern
+          width={40}
+          height={40}
+          strokeDasharray="4 2"
+          className="absolute inset-0 opacity-10 stroke-gray-400 z-0 pointer-events-none"
+        />
+
+        <div className="relative z-10 flex flex-col-reverse md:flex-row justify-between items-start gap-8">
+          <div className="flex-1 flex flex-col gap-y-4 items-start tracking-wider uppercase">
+            <h1 className="font-black text-4 dark:text-1 text-4xl sm:text-6xl md:text-7xl lg:text-8xl">
+              Desarrollador <br />
+              FullStack
+            </h1>
+            <ul className="flex flex-row flex-wrap gap-2">
+              {["Express.js", "TypeScript", "Java", "React.js"].map((tech) => (
+                <li
+                  key={tech}
+                  className="font-mono tracking-[0.22em] bg-6/10 border-6/40 text-[9px] px-3 py-1.5 rounded-full border dark:border-2/20 dark:text-2/80 dark:bg-3/70"
+                >
+                  {tech}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="flex-1 w-full flex flex-col gap-y-4 items-start md:items-end tracking-wider uppercase">
+            <div className="flex flex-row items-center gap-x-2 bg-6/10 border-6/40 px-3 py-1 rounded-full border dark:border-2/20 dark:text-2/80 dark:bg-3/70">
+              <span className="w-2 h-2 rounded-full bg-green-600 animate-pulse" />
+              <p className="font-mono text-5 dark:text-2 text-[10px] font-medium">
+                Disponible
+              </p>
+            </div>
+
+            <address className="not-italic flex flex-col items-start md:items-end gap-y-1 font-mono text-[10px] dark:text-2/70 text-5 font-light">
+              <span>01/</span>
+              <span>Buenos Aires, Argentina</span>
+            </address>
+          </div>
+        </div>
+
+        <div className="relative z-10 flex flex-col md:flex-row flex-wrap gap-4">
+          <div className="flex-1 **:min-h-[25vh]  **:w-full border border-gray-200 mt-6 ">
+            <Balatro
+              isRotate={false}
+              mouseInteraction={false}
+              pixelFilter={5000}
+              color1={isDarkTheme ? "#ff7113ff" : "#003049"}
+              color2={isDarkTheme ? "#f0a12cff" : "#669bbc"}
+              color3={isDarkTheme ? "#4C4464" : "#fdf0d5"}
+            />
+          </div>
+          <div className="flex-1 text-end flex flex-col items-end uppercase gap-y-2">
+            <p className="font-mono dark:text-2/70 text-5 font-light text-[11px]">
+              Programador trainee, <br />
+              con ganas de aprender y crecer.
+            </p>
+            <p className="font-mono dark:text-2/70 text-5/70 font-light text-[11px]">
+              Abierto a pasantías / Full-time / Freelance
+            </p>
+            <h2 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black ">
+              Axel <br /> Berger
+            </h2>
+            <span
+              className={`
+            dark:text-2/70 text-5/70
+             font-mono text-[11px] uppercase tracking-widest
+            `}
+            >
+              {new Date().getFullYear()} Portfolio
+            </span>
+          </div>
+        </div>
+      </section>
 
       <section
         ref={sectionRef}
@@ -72,7 +145,7 @@ export default function Home() {
         <div className="w-full">
           <motion.h2
             style={{ x: x1 }}
-            className={`text-6xl md:text-8xl lg:text-9xl xl:text-[220px] font-black tracking-tighter leading-none whitespace-nowrap flex flex-row items-center gap-x-2 text-3/80 dark:text-1`}
+            className={`text-6xl md:text-8xl lg:text-9xl xl:text-[220px] font-black tracking-tighter leading-none whitespace-nowrap flex flex-row items-center gap-x-2 text-4 dark:text-1`}
           >
             Web Dev{" "}
             <span className="italic text-3xl lg:text-5xl xl:text-6xl font-light text-gray-300 dark:text-gray-700">
@@ -87,7 +160,7 @@ export default function Home() {
         <div className="w-full">
           <motion.h2
             style={{ x: x2 }}
-            className={`text-6xl md:text-8xl lg:text-9xl xl:text-[220px] font-black tracking-tighter leading-none whitespace-nowrap flex flex-row items-center gap-x-2 text-4/80 dark:text-1`}
+            className={`text-6xl md:text-8xl lg:text-9xl xl:text-[220px] font-black tracking-tighter leading-none whitespace-nowrap flex flex-row items-center gap-x-2 text-4 dark:text-1`}
           >
             UI{" "}
             <span className="italic text-3xl lg:text-5xl xl:text-6xl font-light text-gray-300 dark:text-gray-700">
@@ -104,12 +177,12 @@ export default function Home() {
       >
         <div className="flex flex-1 flex-col gap-y-4">
           <div className="flex flex-row gap-x-2 items-center">
-            <span className="text-6 dark:text-2/50 uppercase tracking-widest font-mono text-xs">
-              Stack tecnológico
+            <span className="font-mono font-semibold tracking-widest uppercase text-5 dark:text-2/80 text-sm">
+              Stack
             </span>
             <div className="border-t border-6 dark:border-2/30 w-full" />
           </div>
-          <h2 className="text-4/80 dark:text-1 font-black text-5xl md:text-6xl lg:text-7xl uppercase tracking-tight">
+          <h2 className="font-black text-5xl md:text-6xl lg:text-7xl uppercase tracking-tight">
             Stack
           </h2>
           <p className="dark:text-2/70 text-5 text-base leading-7">
@@ -121,7 +194,9 @@ export default function Home() {
 
           <p className="text-5/70 dark:text-2/50 text-base">
             Actualmente me encuentro desarrollando la tesis de la carrera
-            Analista de Sistemas y empezando un curso full-stack. Siempre busco acompañar a mis compañeros de equipo y
+            Analista de Sistemas y empezando un curso full-stack. Soy una
+            persona puntual y responsable, que cumple con los plazos y objetivos
+            establecidos. Siempre busco acompañar a mis compañeros de equipo y
             ayudar en lo que sea necesario.
           </p>
 
@@ -131,13 +206,13 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="flex-2 flex flex-col justify-center gap-y-12 pl-0 lg:pl-16 mt-12 lg:mt-0">
-          {categories(22).map((cat, idx) => (
+        <div className="flex-2 flex flex-col gap-y-12 pl-0 lg:pl-16 mt-12 lg:mt-0">
+          {categories(20).map((cat, idx) => (
             <div
               key={idx}
               className="flex flex-col md:flex-row items-start md:items-center gap-10"
             >
-              <h3 className="text-3xl md:text-4xl font-black text-6/60 dark:text-2 uppercase tracking-tight leading-none">
+              <h3 className="text-3xl md:text-4xl lg:text-5xl font-black text-5/70 dark:text-2/80 uppercase tracking-tight leading-none">
                 {cat.title}
               </h3>
               <div className="flex-1 flex flex-row flex-wrap gap-x-8 gap-y-4 items-center">
@@ -146,7 +221,7 @@ export default function Home() {
                     <div className="w-8 h-8 flex items-center justify-center shrink-0">
                       {item.icon}
                     </div>
-                    <span className="font-mono text-xs uppercase tracking-wider text-5/70 dark:text-2/70">
+                    <span className="font-mono text-sm uppercase tracking-wider text-gray-500 dark:text-gray-400">
                       {item.name}
                     </span>
                   </div>
@@ -157,10 +232,33 @@ export default function Home() {
         </div>
       </section>
 
-     
+      <section className="flex flex-col w-full px-6 md:px-20 py-16 md:py-20 lg:py-24">
+        <div className="w-full flex flex-col md:flex-row items-start md:items-center justify-between gap-y-6">
+          <div className="flex flex-col gap-y-3">
+            <h2 className="text-6xl md:text-8xl tracking-tight font-black uppercase">
+              Proyectos
+            </h2>
+            <span className="font-mono text-gray-400 font-semibold text-xl uppercase">
+              ©{new Date().getFullYear()} PORTFOLIO
+            </span>
+          </div>
+          <p className="max-w-sm font-sans text-gray-500 dark:text-gray-400 text-sm md:text-base leading-relaxed font-light">
+            Estos son los proyectos que he realizado a lo largo de mi carrera
+            como estudiante de sistemas.
+          </p>
+        </div>
 
-
-
+        <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-8 mt-12 md:mt-16">
+          {projectList.map((proyect) => (
+            <Mockup
+              key={proyect.slug}
+              image={proyect.images?.[0]?.url || ""}
+              title={proyect.title}
+              date={"/" + proyect.year}
+            />
+          ))}
+        </div>
+      </section>
 
       <div className="flex flex-col gap-y-4 overflow-hidden">
         {[duplicatedFirst, duplicatedSecond].map((arr, idx) => (
@@ -185,7 +283,7 @@ export default function Home() {
                       className="flex flex-row items-center gap-x-4"
                     >
                       <div className="min-h-3 min-w-3 md:min-h-5 md:min-w-5 rounded-full bg-6/60 dark:bg-2.5" />
-                      <span className="font-black italic text-4xl md:text-6xl uppercase tracking-wider text-6/60 dark:text-2.5 whitespace-nowrap hover:text-5 hover:dark:text-2 transition-colors duration-300">
+                      <span className="font-mono font-black italic text-4xl md:text-6xl uppercase tracking-wider text-6/60 dark:text-2.5 whitespace-nowrap hover:text-5 hover:dark:text-2 transition-colors duration-300">
                         {" "}
                         {item.name}
                       </span>
@@ -198,11 +296,6 @@ export default function Home() {
         ))}
       </div>
 
-
-      <Proyects />
-
-      <Credentials />
-
       <section className="flex flex-col lg:flex-row px-6 md:px-20 py-16 md:py-20 lg:py-24 gap-12 lg:gap-20">
         <motion.div
           whileInView={{ y: 0, opacity: 1 }}
@@ -211,21 +304,21 @@ export default function Home() {
           viewport={{ once: true }}
           className="flex-1 flex flex-col gap-y-4 min-w-0"
         >
-          <span className="text-6 dark:text-2/50 uppercase tracking-widest font-mono text-xs">
+          <span className="font-mono tracking-widest uppercase text-6 dark:text-2/50 text-sm">
             Contacto
           </span>
-          <div className="leading-none flex flex-row flex-wrap lg:block gap-1 md:gap-3">
-            <h2 className="font-black uppercase text-3xl sm:text-4xl md:text-6xl xl:text-7xl 2xl:text-8xl">
+          <div className="leading-none flex flex-row lg:block gap-3">
+            <h2 className="font-black uppercase text-4xl md:text-6xl xl:text-7xl 2xl:text-8xl">
               Trabajemos
             </h2>
             <h2
-              className={`font-black uppercase text-5/70 dark:text-2/40 text-3xl sm:text-4xl md:text-6xl xl:text-7xl 2xl:text-8xl`}
+              className={`font-black uppercase text-5/40 dark:text-2/40 text-4xl md:text-6xl xl:text-7xl 2xl:text-8xl`}
             >
               juntos
             </h2>
           </div>
           <p
-            className={`font-light text-base md:text-lg lg:max-w-[30vw] text-5/90 dark:text-2/60`}
+            className={`font-light text-lg lg:max-w-[30vw] text-5/80 dark:text-2/60`}
           >
             Si crees que puedo ser una buena opción para tu empresa no dudes en
             contactarme. Estoy siempre abierto a nuevas oportunidades y desafíos
@@ -324,7 +417,5 @@ export default function Home() {
   /** <div className="relative h-[500px] w-full overflow-hidden">
             <OrbitingCircles radius={100}>{innerOrbit}</OrbitingCircles>
             <OrbitingCircles>{outerOrbit}</OrbitingCircles>
-          </div>
-          
-  */
+          </div> */
 }

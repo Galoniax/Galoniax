@@ -4,8 +4,8 @@ import { ROUTES } from "@/api/constants/constants";
 import { motion } from "motion/react";
 import { VideoText } from "@/components/ui/feedback/video-text";
 
-const video = "https://ilozjawukjoolmfdqwjn.supabase.co/storage/v1/object/public/images/Video.mp4";
-const videoDark = "https://ilozjawukjoolmfdqwjn.supabase.co/storage/v1/object/public/images/DarkVideo.mp4";
+const video = "https://txovvyzebjxmtvwifkto.supabase.co/storage/v1/object/public/assets/Video.mp4";
+const videoDark = "https://txovvyzebjxmtvwifkto.supabase.co/storage/v1/object/public/assets/DarkVideo.mp4";
 
 interface NavLinkProps {
   href: string;
@@ -101,12 +101,6 @@ export default function Footer({ isDarkTheme }: { isDarkTheme: boolean }) {
               className={`${textColor} ${textClassName}`}
             >
               Proyectos
-            </NavLink>
-             <NavLink
-               href={ROUTES.INDEX + "#Credentials"}
-              className={`${textColor} ${textClassName}`}
-            >
-              Certificados
             </NavLink>
           </div>
 

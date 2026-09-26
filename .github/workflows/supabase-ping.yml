@@ -14,3 +14,4 @@ jobs:
           curl -X GET "https://txovvyzebjxmtvwifkto.supabase.co/rest/v1/ping" \
           -H "apikey: ${{ secrets.SUPABASE_KEY }}" \
           -H "Authorization: Bearer ${{ secrets.SUPABASE_KEY }}"
+        

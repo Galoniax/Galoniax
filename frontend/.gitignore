@@ -33,3 +33,6 @@ dist-ssr
 .env.local
 .env.*.local
 !.env.example
+
+.vercel
+.env*

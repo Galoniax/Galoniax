@@ -44,7 +44,7 @@ export default function SideBarMenu({ isOpen, onClose }: Props) {
   if (!isOpen) return null;
 
   return createPortal(
-    <motion.section
+    <section
       onClick={() => {
         onClose();
       }}
@@ -57,7 +57,7 @@ export default function SideBarMenu({ isOpen, onClose }: Props) {
         }}
         className="absolute top-10 right-10 cursor-pointer p-2"
       >
-        <X size={28} />
+        <X className="w-6 md:w-10" />
       </button>
       <motion.nav
         onClick={(e) => {
@@ -66,7 +66,7 @@ export default function SideBarMenu({ isOpen, onClose }: Props) {
         variants={navVariants}
         initial="hidden"
         animate="visible"
-        className="flex flex-col gap-y-8 text-5/50 dark:text-2/40 text-center text-6xl font-black uppercase *:transition-all *:duration-200 *:cursor-pointer *:hover:underline underline-offset-8"
+        className="flex flex-col gap-y-8 text-5/50 dark:text-2/40 text-center text-3xl sm:text-4xl md:text-6xl font-black uppercase *:transition-all *:duration-200 *:cursor-pointer *:hover:underline underline-offset-8"
       >
         <motion.a
           variants={itemVariants}
@@ -96,13 +96,13 @@ export default function SideBarMenu({ isOpen, onClose }: Props) {
 
       <div className="flex flex-col items-center">
         <div className="max-w-[5rem] w-full border-t pb-4" />
-        <span className="uppercase text-5 dark:text-2/80 tracking-wider font-semibold text-center text-xl  transition-all duration-200">
+        <span className="uppercase text-5 dark:text-2/80 tracking-wider font-semibold text-center text-sm sm:text-xl transition-all duration-200">
           Trabajemos juntos
         </span>
       </div>
 
       <Time className="justify-center pb-10" />
-    </motion.section>,
+    </section>,
     document.body,
   );
 }

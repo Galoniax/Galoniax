@@ -16,7 +16,7 @@ export default {
         6: "#ADACA6",
 
         "semi-black": "#111111",
-        gray: "#F4F2EA",
+        "gray": "#FAFAFA",
       },
     },
   },

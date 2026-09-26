@@ -39,24 +39,24 @@ export default function Navbar() {
   return (
     <>
       <motion.div
-        style={{ scaleX: scaleX, originX: 0, height: 1.5 }}
+        style={{ scaleX: scaleX, originX: 0, height: 1 }}
         className="fixed gradient top-0 w-full z-50"
       />
       <motion.header
-        animate={{ opacity: hidden ? 0 : 1.5 }}
+        animate={{ opacity: hidden ? 0 : 1 }}
         transition={{ duration: 0.3, ease: "easeInOut" }}
-        style={{ marginTop: 1.5 }}
-        className={`fixed top-0 w-full z-50 backdrop-blur-md bg-white/50 dark:bg-black/50 flex justify-between items-center px-10 py-3`}
+        style={{ marginTop: 1 }}
+        className={`fixed top-0 w-full z-50 backdrop-blur-sm flex justify-between items-center px-10 py-2`}
       >
         <h1
-          className={`cursor-pointer font-semibold text-4 dark:text-1 ${textColor}`}
+          className={`cursor-pointer text-[15px] font-semibold text-4/80 dark:text-2/80 ${textColor}`}
         >
           ByAxel
         </h1>
 
         <div className="cursor-pointer flex flex-row items-center gap-x-5">
           <AnimatedThemeToggler
-            className="hover:bg-6/20 dark:hover:bg-3 cursor-pointer p-2 **:w-4 **:h-4 border border-gray-300 rounded-[10px] hover:border-gray-400 transition-all duration-200 ease-in-out "
+            className="hover:bg-6/20 dark:hover:bg-3 cursor-pointer p-2 **:w-4 **:h-4 border border-gray-300 rounded-[10px] hover:border-gray-400 transition-all duration-200 ease-in-out"
             theme={isDarkTheme ? "dark" : "light"}
             onThemeChange={toggleTheme}
           />
@@ -66,7 +66,7 @@ export default function Navbar() {
             }}
             className="cursor-pointer p-2"
           >
-            <Menu color={textColor} size={24} />
+            <Menu color={textColor} size={23} />
           </button>
         </div>
       </motion.header>

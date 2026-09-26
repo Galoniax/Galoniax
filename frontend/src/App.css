@@ -1,9 +1,9 @@
 @import "tailwindcss";
-@import "@fontsource-variable/geist/wght.css";
-@import "@fontsource-variable/geist-mono/wght.css";
+
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 @import "@fontsource-variable/geist";
+@import 'lenis/dist/lenis.css';
 
 @custom-variant dark (&:is(.dark *));
 

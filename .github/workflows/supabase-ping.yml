@@ -1,0 +1,16 @@
+name: Supabase Pinger
+
+on:
+  schedule:
+    - cron: "0 12 * * *" # Se ejecuta automáticamente todos los días a las 12:00 UTC
+  workflow_dispatch: # Te permite activarlo manualmente desde GitHub cuando quieras
+
+jobs:
+  ping-supabase:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Supabase
+        run: |
+          curl -X GET "https://supabase.co" \
+          -H "apikey: ${{ secrets.SUPABASE_KEY }}" \
+          -H "Authorization: Bearer ${{ secrets.SUPABASE_KEY }}"

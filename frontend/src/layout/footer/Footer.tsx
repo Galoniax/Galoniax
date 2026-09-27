@@ -102,6 +102,12 @@ export default function Footer({ isDarkTheme }: { isDarkTheme: boolean }) {
             >
               Proyectos
             </NavLink>
+             <NavLink
+               href={ROUTES.INDEX + "#Credentials"}
+              className={`${textColor} ${textClassName}`}
+            >
+              Certificados
+            </NavLink>
           </div>
 
           <div className="flex flex-col md:col-span-4 items-start gap-y-2.5">

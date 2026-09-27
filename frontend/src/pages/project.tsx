@@ -1,10 +1,10 @@
-import { getBySlug } from "@/data/projects";
+import { getByTitle } from "@/data/projects";
 import { useParams } from "react-router-dom";
 
 export default function ProjectPage() {
-  const { slug } = useParams<{ slug: string }>();
+  const { title } = useParams<{ title: string }>();
 
-  const project = slug ? getBySlug(slug) : null;
+  const project = title ? getByTitle(title) : null;
 
   return (
     <section>

@@ -9,12 +9,11 @@ type Image = {
 };
 
 export type Proyect = {
-  slug: string;
   title: string;
+  description: string;
   introduction: string;
 
   year: string;
-
   images: Image[];
 
   highlights: readonly string[];
@@ -25,8 +24,9 @@ export type Proyect = {
 
 export const projectList: readonly Proyect[] = [
   {
-    slug: "Dual-Eat",
     title: "DualEat",
+    description:
+      "Ecosistema gastronómico multiplataforma con backend escalable, tracking en tiempo real, pasarela de pagos e integración de IA y OCR para la gestión culinaria y pedidos locales.",
     introduction:
       "Durante un año, me dediqué a desarrollar la tesis de la carrera, DualEat, un ecosistema gastronómico multiplataforma. El objetivo fue crear una herramienta única que elimine la necesidad de múltiples aplicaciones, conectando a los usuarios con establecimientos locales y, simultáneamente, asistiendo en la gestión culinaria del hogar. Este proyecto me permitió integrar tecnologías de IA, sistemas de pago y arquitecturas escalables, consolidando mis habilidades en el desarrollo de software de punta a punta.",
     year: "2026",
@@ -47,8 +47,8 @@ export const projectList: readonly Proyect[] = [
       "Sistema de seguridad robusto con autenticación federada (Google OAuth 2.0), JSON Web Tokens (JWT) y encriptación de datos sensibles con bcrypt.",
     ],
     tech: [
-      "React (Web)",
-      "React Native / Expo (Mobile)",
+      "React",
+      "React Native",
       "TypeScript",
       "Node.js",
       "Express.js",
@@ -80,6 +80,6 @@ export const projectList: readonly Proyect[] = [
   },
 ];
 
-export function getBySlug(slug: string) {
-  return projectList.find((p) => p.slug === slug) || null;
+export function getByTitle(title: string) {
+  return projectList.find((p) => p.title === title) || null;
 }

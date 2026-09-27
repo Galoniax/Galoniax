@@ -5,6 +5,8 @@
 @import "shadcn/tailwind.css";
 @import "@fontsource-variable/geist";
 
+@import 'lenis/dist/lenis.css';
+
 @custom-variant dark (&:is(.dark *));
 
 @config "../tailwind.config.js";

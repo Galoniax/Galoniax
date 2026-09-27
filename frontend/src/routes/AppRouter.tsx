@@ -6,9 +6,12 @@ import { Suspense } from "react";
 import LoadingScreen from "@/components/ui/feedback/LoadingScreen";
 import { AnimatePresence } from "motion/react";
 
+import { ReactLenis } from "lenis/react";
+
 function AppRoutesContent() {
   return (
     <>
+     <ReactLenis root options={{ duration: 1.2 }} />
       <Suspense
         fallback={
           <AnimatePresence mode="wait">
